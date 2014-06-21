@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainModel\Address.cs" />
+    <Compile Include="DomainModel\Postcode.cs" />
+    <Compile Include="DomainModel\PostcodeParseOptions.cs" />
+    <Compile Include="DomainModel\Risk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

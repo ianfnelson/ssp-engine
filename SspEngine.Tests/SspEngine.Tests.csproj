@@ -57,10 +57,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainModel\PostcodeTests\BehaviouralTests.cs" />
+    <Compile Include="DomainModel\PostcodeTests\BfpoFormatTests.cs" />
+    <Compile Include="DomainModel\PostcodeTests\InvalidBs7666FormatTests.cs" />
+    <Compile Include="DomainModel\PostcodeTests\OverseasTerritoryFormatTests.cs" />
+    <Compile Include="DomainModel\PostcodeTests\ValidBs7666FormatTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SspEngine\SspEngine.csproj">
+      <Project>{b8d7a498-5fef-4deb-b848-29284d954f99}</Project>
+      <Name>SspEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
