@@ -49,6 +49,7 @@
     <Compile Include="DomainModel\PostcodeParseOptions.cs" />
     <Compile Include="DomainModel\RatingResult.cs" />
     <Compile Include="DomainModel\Risk.cs" />
+    <Compile Include="Engine.cs" />
     <Compile Include="ICheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
