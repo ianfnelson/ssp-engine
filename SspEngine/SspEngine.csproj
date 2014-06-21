@@ -42,7 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checks\ILookupDataSource.cs" />
+    <Compile Include="Checks\LookupCheck.cs" />
     <Compile Include="Checks\OccupationCheck.cs" />
+    <Compile Include="Checks\OccupationDataSource.cs" />
+    <Compile Include="Checks\Occupations.cs">
+      <DependentUpon>Occupations.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Checks\VehicleKeptCheck.cs" />
     <Compile Include="DomainModel\Address.cs" />
     <Compile Include="DomainModel\Postcode.cs" />
@@ -54,9 +60,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Checks\Occupations.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="LookupData\Occupations.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

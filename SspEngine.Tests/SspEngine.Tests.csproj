@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checks\OccupationCheckFixture.cs" />
     <Compile Include="DomainModel\PostcodeTests\BehaviouralTests.cs" />
     <Compile Include="DomainModel\PostcodeTests\BfpoFormatTests.cs" />
     <Compile Include="DomainModel\PostcodeTests\InvalidBs7666FormatTests.cs" />
@@ -74,9 +75,7 @@
       <Name>SspEngine</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Checks\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

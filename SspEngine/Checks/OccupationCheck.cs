@@ -3,8 +3,22 @@ using SspEngine.DomainModel;
 
 namespace SspEngine.Checks
 {
-    public class OccupationCheck : ICheck
+    public class OccupationCheck : LookupCheck<string>, ICheck
     {
+        public OccupationCheck() : base(new OccupationDataSource())
+        {
+        }
+
+        public override RatingResult ResultIfDataMissing
+        {
+            get { return RatingResult.Decline; }
+        }
+
+        public override Func<Risk, string> KeyFunction
+        {
+            get { return x => x.Occupation; }
+        }
+
         public string Description
         {
             get { return "Occupation Check"; }
@@ -13,11 +27,6 @@ namespace SspEngine.Checks
         public int Ordinality
         {
             get { return 1; }
-        }
-
-        public RatingResult RunCheck(Risk risk)
-        {
-            throw new NotImplementedException();
         }
     }
 }

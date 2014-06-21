@@ -1,0 +1,14 @@
+<Occupations>
+	<Occupation>
+		<Desc>Chef</Desc>
+		<Action>Refer</Action>
+	</Occupation>
+	<Occupation>
+		<Desc>Footballer</Desc>
+		<Action>Accept</Action>
+	</Occupation>
+	<Occupation>
+		<Desc>IT Contractor</Desc>
+		<Action>Decline</Action>
+	</Occupation>
+</Occupations>
