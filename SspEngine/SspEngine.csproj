@@ -34,7 +34,9 @@
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,13 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppSettingsProvider.cs" />
     <Compile Include="Checks\ILookupDataSource.cs" />
+    <Compile Include="Checks\IPostcodeToGeoCoordinateService.cs" />
+    <Compile Include="Checks\IPostcodeToGeoCoordinateServiceFactory.cs" />
     <Compile Include="Checks\LookupCheck.cs" />
     <Compile Include="Checks\OccupationCheck.cs" />
     <Compile Include="Checks\OccupationDataSource.cs" />
     <Compile Include="Checks\Occupations.cs">
       <DependentUpon>Occupations.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Checks\PostcodeToGeoCoordinateService.cs" />
+    <Compile Include="Checks\PostcodeToGeoCoordinateServiceFactory.cs" />
     <Compile Include="Checks\VehicleKeptCheck.cs" />
     <Compile Include="DomainModel\Address.cs" />
     <Compile Include="DomainModel\Postcode.cs" />
