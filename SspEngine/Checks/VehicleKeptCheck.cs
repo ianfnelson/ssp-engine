@@ -33,14 +33,14 @@ namespace SspEngine.Checks
             return InterpretDistance(distance);
         }
 
-        private static RatingResult InterpretDistance(double distance)
+        public virtual RatingResult InterpretDistance(double distance)
         {
             if (distance < AppSettingsProvider.Current.VehicleKeptCheck_AcceptBelowMetres) return RatingResult.Accept;
 
             return distance < AppSettingsProvider.Current.VehicleKeptCheck_ReferBelowMetres ? RatingResult.Refer : RatingResult.Decline;
         }
 
-        private Tuple<GeoCoordinate, GeoCoordinate> GetCoordinatePair(Risk risk)
+        public virtual Tuple<GeoCoordinate, GeoCoordinate> GetCoordinatePair(Risk risk)
         {
             GeoCoordinate addressCoordinates = null;
             GeoCoordinate keptCoordinates = null;

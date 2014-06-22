@@ -25,8 +25,8 @@ namespace SspEngine
             }
         }
 
-        public abstract int VehicleKeptCheck_AcceptBelowMetres { get; }
-        public abstract int VehicleKeptCheck_ReferBelowMetres { get; }
+        public abstract double VehicleKeptCheck_AcceptBelowMetres { get; }
+        public abstract double VehicleKeptCheck_ReferBelowMetres { get; }
 
         public static void ResetToDefault()
         {
@@ -36,14 +36,14 @@ namespace SspEngine
 
     public class DefaultAppSettingsProvider : AppSettingsProvider
     {
-        public override int VehicleKeptCheck_AcceptBelowMetres
+        public override double VehicleKeptCheck_AcceptBelowMetres
         {
-            get { return int.Parse(ConfigurationManager.AppSettings["VehicleKeptCheck_AcceptBelowMetres"]); }
+            get { return double.Parse(ConfigurationManager.AppSettings["VehicleKeptCheck_AcceptBelowMetres"]); }
         }
 
-        public override int VehicleKeptCheck_ReferBelowMetres
+        public override double VehicleKeptCheck_ReferBelowMetres
         {
-            get { return int.Parse(ConfigurationManager.AppSettings["VehicleKeptCheck_ReferBelowMetres"]); }
+            get { return double.Parse(ConfigurationManager.AppSettings["VehicleKeptCheck_ReferBelowMetres"]); }
         }
     }
 }
