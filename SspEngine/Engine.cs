@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using SspEngine.DomainModel;
 
@@ -14,7 +13,7 @@ namespace SspEngine
     {
         public IList<ICheck> Checks { get; private set; } 
 
-        public Engine(params ICheck[] checks)
+        public Engine(IEnumerable<ICheck> checks)
         {
             Checks = checks.OrderBy(c => c.Ordinality).ToList();
         }

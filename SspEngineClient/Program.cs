@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Autofac;
 
 namespace SspEngineClient
 {
@@ -12,15 +9,14 @@ namespace SspEngineClient
         {
             // setup log4net
 
-            // setup ioc
-
             AutoMapperConfiguration.Configure();
 
-            // get files
+            var container = AutofacConfiguration.Configure();
 
-            // loop through files
+            container.Resolve<ICore>().RateRisks();
 
-
+            Console.WriteLine("(hit a key to exit)");
+            Console.ReadKey();
         }
     }
 }
