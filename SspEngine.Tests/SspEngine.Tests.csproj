@@ -59,6 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checks\OccupationCheckFixture.cs" />
+    <Compile Include="Checks\PostcodeToGeoCoordinateServiceFactoryFixture.cs" />
+    <Compile Include="Checks\PostcodeToGeoCoordinateServiceFixture.cs" />
     <Compile Include="Checks\VehicleKeptCheckFixture.cs" />
     <Compile Include="DomainModel\PostcodeTests\BehaviouralTests.cs" />
     <Compile Include="DomainModel\PostcodeTests\BfpoFormatTests.cs" />
