@@ -8,11 +8,19 @@ namespace SspEngine.Tests.Checks
     [TestFixture]
     public class PostcodeToGeoCoordinateServiceFixture
     {
+        [TearDown]
+        public void TearDown()
+        {
+            Cache.ResetToDefault();
+        }
+
         [TestCase("YO8 3UW", 53.812604D, -1.097173D)]
         [TestCase("W11 1JA", 51.516117D, -0.204534D)]
         public void GetCoordinatesForPostcodeTests(string postcodeString, double expectedLatitude, double expectedLongitude)
         {
             // Arrange
+            Cache.Current = new NullCache();    // Disable caching
+
             var postcode = Postcode.Parse(postcodeString);
             var sut = new PostcodeToGeoCoordinateService();
 
@@ -23,5 +31,7 @@ namespace SspEngine.Tests.Checks
             coordinate.Latitude.Should().BeApproximately(expectedLatitude, 0.000001D);
             coordinate.Longitude.Should().BeApproximately(expectedLongitude, 0.000001D);
         }
+
+
     }
 }

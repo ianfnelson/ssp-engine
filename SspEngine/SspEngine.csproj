@@ -46,6 +46,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Device" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettingsProvider.cs" />
+    <Compile Include="AspNetCache.cs" />
     <Compile Include="Checks\ChecksModule.cs" />
     <Compile Include="Checks\ILookupDataSource.cs" />
     <Compile Include="Checks\IPostcodeToGeoCoordinateService.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="DomainModel\RatingResult.cs" />
     <Compile Include="DomainModel\Risk.cs" />
     <Compile Include="Engine.cs" />
+    <Compile Include="Cache.cs" />
     <Compile Include="ICheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SspEngineModule.cs" />
