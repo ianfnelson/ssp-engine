@@ -1,5 +1,6 @@
 ﻿using System;
 using Autofac;
+using log4net.Config;
 
 namespace SspEngineClient
 {
@@ -7,15 +8,18 @@ namespace SspEngineClient
     {
         static void Main(string[] args)
         {
-            // setup log4net
+            // log4net
+            XmlConfigurator.Configure();
 
+            // AutoMapper
             AutoMapperConfiguration.Configure();
 
+            // Autofac
             var container = AutofacConfiguration.Configure();
 
+            // Let's rate some risks!
             container.Resolve<ICore>().RateRisks();
 
-            Console.WriteLine("(hit a key to exit)");
             Console.ReadKey();
         }
     }

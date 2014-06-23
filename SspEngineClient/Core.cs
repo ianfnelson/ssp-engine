@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+using log4net;
 using SspEngine;
 
 namespace SspEngineClient
@@ -7,6 +9,8 @@ namespace SspEngineClient
     {
         private readonly IRiskRepository _riskRepository;
         private readonly IEngine _engine;
+
+        private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         public Core(IRiskRepository riskRepository, IEngine engine)
         {
@@ -22,7 +26,7 @@ namespace SspEngineClient
             {
                 var result = _engine.RunChecks(risk);
 
-                Console.WriteLine("{0} - {1}", risk.Name, result);
+                Log.InfoFormat("{0} - {1}", risk.Name, result);
             }
         }
     }
